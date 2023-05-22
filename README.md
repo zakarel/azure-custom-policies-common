@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-1. Cloning the project to you local workstation:
+1. Cloning the project to your local workstation:
 
 ```
 git clone git@github.com:zakarel/Custom-Azure-Policies.git

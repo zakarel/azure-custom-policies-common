@@ -1,0 +1,28 @@
+{
+  "mode": "All",
+  "policyRule": {
+        "if": {
+            "allOf": [
+                {
+                    "field": "type",
+                    "equals": "Microsoft.DBforPostgreSQL/servers"
+                }
+            ]
+        },
+        "then": {
+          "effect": "modify",
+          "details": {
+            "roleDefinitionIds": [
+              "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+            ],
+            "operations": [
+              {
+                "operation": "addOrReplace",
+                "field": "Microsoft.DBforPostgreSQL/servers/publicNetworkAccess",
+                "value": "Disabled"
+              }
+            ]
+          }
+        }
+      }
+    }
