@@ -6,6 +6,10 @@
                 {
                     "field": "type",
                     "equals": "Microsoft.DBforPostgreSQL/servers"
+                },
+                {
+                    "field": "Microsoft.DBforPostgreSQL/servers/publicNetworkAccess",
+                    "equals": "Enabled"
                 }
             ]
         },
