@@ -1,0 +1,51 @@
+{
+    "properties": {
+      "displayName": "deny any non 1.2TLS",
+      "policyType": "BuiltIn",
+      "mode": "Indexed",
+      "description": "Denying any non 1.2TLS. Created: Tzahi-Ariel",
+      "metadata": {
+        "version": "1.0",
+        "category": "SQL"
+      },
+      "version": "1.0.1",
+      "parameters": {
+        "effect": {
+          "type": "string",
+          "defaultValue": "Deny",
+          "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+          ],
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          }
+        }
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.DBforPostgreSQL/servers"
+            },
+            {
+              "field": "Microsoft.DBforPostgreSQL/servers/sslEnforcement",
+              "exists": "true"
+            },
+            {
+              "field": "Microsoft.DBforPostgreSQL/servers/minimalTlsVersion",
+              "notEquals": "TLS1_2"
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/providers/Microsoft.Authorization/policyDefinitions/d158790f-bfb0-486c-8631-2dc6b4e8e6af",
+    "name": "d158790f-bfb0-486c-8631-2dc6b4e8e6af"
+  }
