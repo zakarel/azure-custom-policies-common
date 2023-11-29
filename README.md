@@ -1,4 +1,4 @@
-# Azure Custom Policies
+# Azure Custom Policies - Common use cases
 
 <img src="https://img.shields.io/badge/Azure%20CLI%20-v2.43.1-blue?style=flat-square">   <img src="https://img.shields.io/badge/VSCode%20-v1.76.2-purple?style=flat-square">
 
