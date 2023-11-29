@@ -1,9 +1,13 @@
-# Azure Custom Policies - Common use cases
+# [WIP] Azure Custom Policies - Common use cases
 
 <img src="https://img.shields.io/badge/Azure%20CLI%20-v2.43.1-blue?style=flat-square">   <img src="https://img.shields.io/badge/VSCode%20-v1.76.2-purple?style=flat-square">
 
 ## Projects
 - Network / Deny all Public Resources
+- Security  / Deny-nonTLS1.2PostgreSQL
+            / Deny-public-access-singlepostgres
+            / ensure_TLS1.2_Postgresql
+- [WIP] Monitoring
 
 ## Getting Started
 
@@ -13,7 +17,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 - Azure CLI
 - Azure Subscription
-- Sufficient Cloud permissions
 
 ### Installing
 
