@@ -1,4 +1,2 @@
-Network/* linguist-documentation=false
-Network/* linguist-vendored
-Security/* linguist-documentation=false
-Security/* linguist-vendored
+Network/* linguist-language=Json
+Security/* linguist-language=Json
